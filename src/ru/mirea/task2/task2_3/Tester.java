@@ -13,8 +13,6 @@ public class Tester {
         this.circlesSize = circlesSize;
     }
 
-    public Tester() {
-    }
 
     public Circle findSmallestCircle() {
         return Collections.min(Arrays.asList(circles), Circle::compareTo);

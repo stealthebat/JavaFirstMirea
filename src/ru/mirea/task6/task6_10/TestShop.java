@@ -1,12 +1,12 @@
-package ru.mirea.task2.task2_4;
+package ru.mirea.task6.task6_10;
 
-import ru.mirea.task6.task6_10.*;
+import ru.mirea.task2.task2_4.Shop;
 
 import java.util.Scanner;
 
 public class TestShop {
     public static void main(String[] args) {
-        Shop shop = new Shop();
+        ru.mirea.task2.task2_4.Shop shop = new Shop();
         shop.addComputer(new Computer(
                 new Processor(4),
                 new Memory(8),
@@ -38,8 +38,10 @@ public class TestShop {
         ));
 
         shop.listComputers();
+        System.out.println();
         shop.deleteComputer(2);
         shop.listComputers();
+        System.out.println();
         System.out.println(shop.findComputer(ComputerBrands.LENOVO));
     }
 }

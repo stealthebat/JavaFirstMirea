@@ -1,7 +1,4 @@
-package ru.mirea.task2.task2_4;
-
-import ru.mirea.task6.task6_10.Computer;
-import ru.mirea.task6.task6_10.ComputerBrands;
+package ru.mirea.task6.task6_10;
 
 import java.util.ArrayList;
 import java.util.List;
