@@ -18,14 +18,20 @@ public class Shop {
         computers = new ArrayList<Computer>();
     }
 
-    public Computer findComputer(ComputerBrands brand) {
+    public List<Computer> findComputer(ComputerBrands brand) {
+        List<Computer> res = new ArrayList<>();
         for (Computer computer : computers) {
             if (computer.getBrand() == brand) {
-                return computer;
+                res.add(computer);
             }
         }
-        System.out.println("Такого компьютера нет");
-        return null;
+        if (res.size() == 0) {
+            System.out.println("Таких компьютеров нет");
+            return null;
+        }
+        else {
+            return res;
+        }
     }
 
     public void addComputer(Computer computer) {

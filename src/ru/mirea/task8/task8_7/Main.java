@@ -1,7 +1,6 @@
-package ru.mirea.task8.task8_4;
+package ru.mirea.task8.task8_7;
 
 public class Main {
-    static int callCount;
     public static void factorize(int n, int factor) {
         if (n < 2) return;
         if (n % factor == 0) {

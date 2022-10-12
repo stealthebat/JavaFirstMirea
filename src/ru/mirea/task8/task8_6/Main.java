@@ -1,4 +1,4 @@
-package ru.mirea.task8.task8_3;
+package ru.mirea.task8.task8_6;
 
 public class Main {
 
