@@ -11,6 +11,7 @@ public class Main {
     private static JLabel scoreLabel = new JLabel();
     private static JLabel lastScorerLabel = new JLabel();
     private static JLabel winnerLabel = new JLabel();
+
     public static void main(String[] args) {
         Main m = new Main();
         JFrame frame = new JFrame("Match Result");
