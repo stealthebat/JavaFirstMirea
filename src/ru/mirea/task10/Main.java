@@ -1,5 +1,6 @@
 package ru.mirea.task10;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class Main {
         }
     }
 
-    public static void mergeSort(List<Integer> arr, int l, int r) {
+    public static <T extends Comparable<T>> void mergeSort(List<T> arr, int l, int r) {
         if (l < r) {
             int mid = l + (r - l) / 2;
             mergeSort(arr, l, mid);
@@ -44,14 +45,38 @@ public class Main {
 
         }
     }
-    public static void main(String[] args) {
-        List<Integer> arr = new ArrayList<Integer>();
-        for (int i = 0; i < 10; i++) {
-            arr.add((int) (1 + Math.random() * 19));
-        }
-        System.out.println(arr.toString());
-        mergeSort(arr, 0, arr.size() - 1);
-        System.out.println(arr.toString());
 
+    public static <T> void printList(List<T> list) {
+        for (T val : list) {
+            System.out.println(val);
+        }
+    }
+
+    public static <T extends Comparable<T>> List<T> mergeIntoSorted(List<T> list1, List<T> list2) {
+        List<T> result = new ArrayList<>();
+        result.addAll(list1);
+        result.addAll(list2);
+        mergeSort(result, 0, result.size() - 1);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        List<Student> arr1 = new ArrayList<>();
+        arr1.add(new Student("Peter", "Pen", "Science", 3, 10));
+        arr1.add(new Student("Marie", "Smith", "Computer Science", 2, 5));
+        arr1.add(new Student("Bob", "Johnson", "Geography", 4, 1));
+
+        List<Student> arr2 = new ArrayList<>();
+        arr2.add(new Student("Polly", "Pen", "Biology", 5, 11));
+        arr2.add(new Student("John", "Floyd", "Engineering", 1, 2));
+        arr2.add(new Student("Mark", "Floyd", "Engineering", 1, 2));
+
+        printList(arr1);
+        System.out.println("------------");
+        printList(arr2);
+        System.out.println("------------");
+        System.out.println("Result: ");
+        List<Student> res = mergeIntoSorted(arr1, arr2);
+        printList(res);
     }
 }

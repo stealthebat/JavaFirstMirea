@@ -1,6 +1,6 @@
 package ru.mirea.task9;
 
-public class Student {
+public class Student implements Comparable<Student> {
     String name;
     int id;
     double GPA;
@@ -36,6 +36,11 @@ public class Student {
 
     public void setGPA(double GPA) {
         this.GPA = GPA;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Double.compare(this.getGPA(), o.getGPA());
     }
 
     public Student(String name, int id, double GPA) {
