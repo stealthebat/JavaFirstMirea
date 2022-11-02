@@ -10,35 +10,28 @@ public class Main {
     }
 }
 
-class Menu extends JFrame implements ItemListener {
-    JLabel label = new JLabel("Hi");
-    JComboBox comboBox;
-    Font fnt = new Font("Times new roman", Font.BOLD, 20);
+class Menu extends JFrame {
+    static final String[] countries = { "Australia", "China", "England", "Russia"};
+    static final String[] countriesInfo = {
+            "Australia's capital is Canberra. Country's population is about 26 millions people.\nAustralia's island state Tasmania has the cleanest air in the world.",
+            "China's capital is Beijing. Country's population is about 1.4 billion people.\nChina is the most populated country in the world.",
+            "England's capital is London. Country's population is about 63,7 millions people.\nEngland fought the shortest fight in history.",
+            "Russia's capital is Moscow. Country's population is about 146 millions people.\nRussia is the biggest country in the world."};
+    JComboBox<String> comboBox = new JComboBox<>(countries);
 
     Menu() {
         super("Menu");
         setLayout(new FlowLayout());
         setSize(250, 150);
-        add(label);
-
-        String[] countries = { "Australia", "China", "England", "Russia"};
-        comboBox = new JComboBox(countries);
-        comboBox.addItemListener(this);
+        comboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, countriesInfo[comboBox.getSelectedIndex()], "Info", JOptionPane.INFORMATION_MESSAGE);
+            }
+        });
         add(comboBox);
 
-        if (comboBox.getSelectedItem() == "Australia") {
-            label.setText("Aus");
-        } else {
-            label.setText("other");
-        }
-
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-    }
-
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-        if (e.getSource() == comboBox) {
-            label.setText("Hi " + comboBox.getSelectedItem());
-        }
     }
 }

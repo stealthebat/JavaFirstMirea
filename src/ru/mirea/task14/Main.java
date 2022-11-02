@@ -1,11 +1,7 @@
 package ru.mirea.task14;
 
-
-
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.text.CollationElementIterator;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,7 +18,6 @@ public class Main {
         System.out.println("Task nine:");
         taskNine();
     }
-
 
     private static void taskTwo() {
         Pattern pattern = Pattern.compile("abcdefghijklmnopqrstuv18340");
@@ -55,8 +50,15 @@ public class Main {
             if (sampleText.substring(i, i+1).matches("[a-zA-Z]"))
                 frequencyDict.put(sampleText.charAt(i), frequencyDict.getOrDefault(sampleText.charAt(i), 0) + 1);
         }
+        List<Map.Entry<Character, Integer>> list = new ArrayList<>(frequencyDict.entrySet());
+        list.sort(Map.Entry.comparingByValue());
+        Collections.reverse(list);
+        Map<Character, Integer> sortedFreqDict = new LinkedHashMap<>();
+        for (Map.Entry<Character, Integer> entry : list) {
+            sortedFreqDict.put(entry.getKey(), entry.getValue());
+        }
         System.out.println("Frequency dictionary: ");
-        for (Map.Entry<Character, Integer> entry : frequencyDict.entrySet()) {
+        for (Map.Entry<Character, Integer> entry : sortedFreqDict.entrySet()) {
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
     }
