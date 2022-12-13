@@ -31,17 +31,17 @@ public class Main {
         userDate.setMinutes(minute);
         userDate.setSeconds(second);
 
-        if (date.compareTo(sysTime) > 0) {
+        if (date.compareTo(sysTime) < 0) {
             System.out.println("Today is after System Time");
-        } else if (date.compareTo(sysTime) < 0) {
+        } else if (date.compareTo(sysTime) > 0) {
             System.out.println("Today is before System Time");
         } else {
             System.out.println("Today is equal to System Time");
         }
 
-        if (userDate.compareTo(sysTime) > 0) {
+        if (userDate.compareTo(sysTime) < 0) {
             System.out.println("User's date is after System Time");
-        } else if (date.compareTo(sysTime) < 0) {
+        } else if (date.compareTo(sysTime) > 0) {
             System.out.println("User's date is before System Time");
         } else {
             System.out.println("User's date is equal to System Time");

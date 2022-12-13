@@ -14,10 +14,11 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel mainPanel = new JPanel();
-        JLabel label = getLabelWithPic("C:\\Users\\mirea\\Downloads\\swing.gif");
-        mainPanel.add(label);
-
-        frame.getContentPane().add(mainPanel);
+        // JLabel label = getLabelWithPic("C:\\Users\\mirea\\Downloads\\swing.gif");
+        JPanel panelWithRandomShapes = getPanelWithRandomShapes();
+        // mainPanel.add(label);
+        frame.add(panelWithRandomShapes);
+        //frame.getContentPane().add(mainPanel);
         frame.pack();
         frame.setVisible(true);
     }

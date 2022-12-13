@@ -14,10 +14,10 @@ public class Main {
     public static void main(String[] args) {
         int size;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите размер массива, число больше 0: ");
+        System.out.println("Enter array size: ");
         size = sc.nextInt();
         while (size <= 0) {
-            System.out.println("Повторите ввод");
+            System.out.println("Input correct size");
             size = sc.nextInt();
         }
 
@@ -40,7 +40,7 @@ public class Main {
         }
 
         if (!hasEven) {
-            System.out.println("Четных элементов нет");
+            System.out.println("There's no even numbers");
             System.exit(0);
         }
 

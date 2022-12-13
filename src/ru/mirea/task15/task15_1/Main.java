@@ -38,7 +38,7 @@ class Calculator extends JFrame {
                 try {
                     double x1 = Double.parseDouble(jta1.getText().trim());
                     double x2 = Double.parseDouble(jta2.getText().trim());
-                    JOptionPane.showMessageDialog(null, "Result = " + (x1 + x2), "Alert", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Result = " + (x1 + x2), "Result", JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Error in Numbers !", "alert", JOptionPane.ERROR_MESSAGE);
                 }
@@ -50,7 +50,7 @@ class Calculator extends JFrame {
                 try {
                     double x1 = Double.parseDouble(jta1.getText().trim());
                     double x2 = Double.parseDouble(jta2.getText().trim());
-                    JOptionPane.showMessageDialog(null, "Result = " + (x1 - x2), "Alert", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Result = " + (x1 - x2), "Result", JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Error in Numbers !", "alert", JOptionPane.ERROR_MESSAGE);
                 }
@@ -62,7 +62,7 @@ class Calculator extends JFrame {
                 try {
                     double x1 = Double.parseDouble(jta1.getText().trim());
                     double x2 = Double.parseDouble(jta2.getText().trim());
-                    JOptionPane.showMessageDialog(null, "Result = " + (x1 * x2), "Alert", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Result = " + (x1 * x2), "Result", JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Error in Numbers !", "alert", JOptionPane.ERROR_MESSAGE);
                 }
@@ -74,7 +74,7 @@ class Calculator extends JFrame {
                 try {
                     double x1 = Double.parseDouble(jta1.getText().trim());
                     double x2 = Double.parseDouble(jta2.getText().trim());
-                    JOptionPane.showMessageDialog(null, "Result = " + (x1 / x2), "Alert", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Result = " + (x1 / x2), "Result", JOptionPane.INFORMATION_MESSAGE);
                 } catch (Exception e) {
                     JOptionPane.showMessageDialog(null, "Error in Numbers !", "alert", JOptionPane.ERROR_MESSAGE);
                 }

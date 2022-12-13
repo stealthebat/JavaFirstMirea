@@ -11,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         int n = 141;
+        System.out.println(n + " is prime: ");
         if (isPrime(n, 2)) {
             System.out.println("YES");
         }

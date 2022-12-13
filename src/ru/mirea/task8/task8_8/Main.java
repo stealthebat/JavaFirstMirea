@@ -10,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         String s = "aaacasdasdbaasdasdasdasdbaaa";
+        System.out.println(s + " is palindrome:");
         if (isPalindrome(s)) {
             System.out.println("YES");
         }

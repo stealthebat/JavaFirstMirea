@@ -26,6 +26,6 @@ public class Main {
                 break;
             }
         }
-        System.out.println("Последовательность " + (isStrictlyIncreasing ? "" : "не ") + "строго возрастающая");
+        System.out.println("Sequence is" + (isStrictlyIncreasing ? " " : " not ") + "strictly increasing");
     }
 }

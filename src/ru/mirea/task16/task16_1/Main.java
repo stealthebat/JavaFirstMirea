@@ -42,11 +42,11 @@ class GuessGame extends JFrame {
                         JOptionPane.showMessageDialog(null, "Your guess is correct", "Win", JOptionPane.INFORMATION_MESSAGE);
                         dispatchEvent(new WindowEvent(obj, WindowEvent.WINDOW_CLOSING));
                     } else {
-                        JOptionPane.showMessageDialog(null, "Your guess is incorrect", "Win", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Your guess is incorrect", "Error", JOptionPane.INFORMATION_MESSAGE);
                         triesCount++;
                     }
                     if (triesCount >= 3) {
-                        JOptionPane.showMessageDialog(null, "You don't have any tries left", "Win", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "You don't have any tries left", "Lose", JOptionPane.INFORMATION_MESSAGE);
                         dispatchEvent(new WindowEvent(obj, WindowEvent.WINDOW_CLOSING));
                     }
                 } catch (Exception e) {

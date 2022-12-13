@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         workWithReport();
+        internetShop();
     }
 
     public static void workWithReport() {
@@ -19,6 +20,7 @@ public class Main {
 
         Report.generateReport(employees);
     }
+
     public static void internetShop() {
         Scanner sc = new Scanner(System.in);
         System.out.println("В какой валюте оплатить заказ?");

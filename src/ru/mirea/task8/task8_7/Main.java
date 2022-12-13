@@ -13,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         int n = 998911;
+        System.out.println(n + " factorized:");
         factorize(n, 2);
     }
 }

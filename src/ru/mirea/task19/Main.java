@@ -14,11 +14,11 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int cmd;
-        System.out.println("0) Выход");
-        System.out.println("1) Добавить студента");
-        System.out.println("2) Найти студента по имени");
-        System.out.println("3) Отсортировать студентов по успеваемости");
-        System.out.println("4) Список студентов");
+        System.out.println("0) Р’С‹С…РѕРґ");
+        System.out.println("1) Р”РѕР±Р°РІРёС‚СЊ СЃС‚СѓРґРµРЅС‚Р°");
+        System.out.println("2) РќР°Р№С‚Рё СЃС‚СѓРґРµРЅС‚Р° РїРѕ РёРјРµРЅРё");
+        System.out.println("3) РћС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ СЃС‚СѓРґРµРЅС‚РѕРІ РїРѕ СѓСЃРїРµРІР°РµРјРѕСЃС‚Рё");
+        System.out.println("4) РЎРїРёСЃРѕРє СЃС‚СѓРґРµРЅС‚РѕРІ");
         while (true) {
             while (true) {
                 cmd = sc.nextInt();
@@ -36,7 +36,7 @@ public class Main {
                 case 2:
                     Student foundStudent;
                     String name = "";
-                    System.out.println("Введите имя студента для поиска: ");
+                    System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ СЃС‚СѓРґРµРЅС‚Р° РґР»СЏ РїРѕРёСЃРєР°: ");
                     sc.nextLine();
                     try {
                         name = sc.nextLine();
@@ -48,7 +48,7 @@ public class Main {
                         System.out.println(e.getMessage());
                         continue;
                     }
-                    System.out.println("Информация о студенте");
+                    System.out.println("РРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃС‚СѓРґРµРЅС‚Рµ");
                     System.out.println(foundStudent);
                     break;
                 case 3:
